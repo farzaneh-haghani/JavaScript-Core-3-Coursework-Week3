@@ -70,3 +70,19 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+function displayGryffindorHouse(infoArr) {
+  infoArr.forEach(({ firstName, lastName, house } = eachPerson) => {
+    house === "Gryffindor" ? console.log(`${firstName} ${lastName} lives in Gryffindor house`) : null;
+  });
+}
+
+function teacherWithPet(infoArr) {
+  infoArr.forEach(({ firstName, lastName, pet } = eachPerson) => {
+    pet !== null ? console.log(`${firstName} ${lastName} has a ${pet}`) : null;
+  });
+}
+
+displayGryffindorHouse(hogwarts);
+teacherWithPet(hogwarts);
