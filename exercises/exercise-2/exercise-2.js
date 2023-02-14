@@ -74,13 +74,13 @@ let hogwarts = [
 
 function displayGryffindorHouse(infoArr) {
   infoArr.forEach(({ firstName, lastName, house } = eachPerson) => {
-    house === "Gryffindor" ? console.log(`${firstName} ${lastName} lives in Gryffindor house`) : null;
+    house === "Gryffindor" ? console.log(`${firstName} ${lastName}`) : null;
   });
 }
 
 function teacherWithPet(infoArr) {
-  infoArr.forEach(({ firstName, lastName, pet } = eachPerson) => {
-    pet !== null ? console.log(`${firstName} ${lastName} has a ${pet}`) : null;
+  infoArr.forEach(({ firstName, lastName, pet, occupation } = eachPerson) => {
+    pet !== null && occupation === "Teacher" ? console.log(`${firstName} ${lastName} has a pet`) : null;
   });
 }
 
